@@ -36,6 +36,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         viewBinding = true
     }
@@ -49,7 +50,12 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.9.2")
     implementation("androidx.fragment:fragment-ktx:1.8.3")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    // Google Maps
     implementation(libs.play.services.maps)
+
+    // ✅ Tambahkan baris ini
+    implementation("com.google.android.gms:play-services-location:21.3.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

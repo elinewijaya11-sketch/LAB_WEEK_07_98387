@@ -3,24 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 🔹 Izin lokasi -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.LAB_WEEK_07">
 
+        <!-- Di sinilah Google Maps SDK membaca API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="@string/google_maps_key" />
 
-        <!-- 🔹 Jadikan MapsActivity sebagai activity utama (launcher) -->
         <activity
             android:name=".MapsActivity"
             android:exported="true"
@@ -31,12 +27,7 @@
             </intent-filter>
         </activity>
 
-        <!-- 🔹 MainActivity tetap ada tapi bukan launcher -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false">
-        </activity>
-
     </application>
+
 
 </manifest>
